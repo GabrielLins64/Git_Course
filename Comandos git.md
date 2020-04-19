@@ -32,8 +32,7 @@ git status # informa o status do repositório atual
 	Untracked: O arquivo existe mas ainda não foi incluído no git
 git add file.etc # Adiciona ao repositório o arquivo "file.etc"
 git commit # Dá o commit nos arquivos já adicionados.
-git commit -m "Adicione um comentário aqui"
-	# É uma boa prática informar o que foi feito em cada commit
+git commit -m "Adicione um comentário aqui" # É uma boa prática informar o que foi feito em cada commit
 git commit -am "Comentário" # commita todos os arquivos modificados
 git commit -om "Comentário" Arquivo # commita apenas o arquivo "Arquivo"
 git checkout file # Desfaz as alterações no arquivo modified file
