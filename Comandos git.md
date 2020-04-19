@@ -3,6 +3,19 @@ Curso Git e GitHub Udemy
 Comandos Git Básicos:
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Status de arquivos no GIT:
+
+O arquivo pode estar:
+ ___________ ____________ __________ ________
+| Untracked | Unmodified | Modified | Staged |
+|   (ADD)---+------------+----------+--->    |
+|           |   (EDIT)---+---->     |        |
+|           |            | (STAGE)--+--->    |
+|      <----+--(REMOVE)  |          |        |
+|           |      <-----+----------+(COMMIT)|
+|___________|____________|__________|________|
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Configurações:
 
 git config --global user.name "Nome do usuário"
@@ -23,7 +36,11 @@ git commit -m "Adicione um comentário aqui"
 	# É uma boa prática informar o que foi feito em cada commit
 git commit -am "Comentário" # commita todos os arquivos modificados
 git commit -om "Comentário" Arquivo # commita apenas o arquivo "Arquivo"
-git checkout file # 
+git checkout file # Desfaz as alterações no arquivo modified file
+git reset HEAD file # Tira da fila de stageds o arquivo file
+git reset --soft hash # Deixa o arquivo commitado como modified staged, na versão da hash informada (não elimina as versões posteriores).
+git reset --mixed hash # Volta o arquivo commitado para modified unstaged, na versão da hash informada (não elimina versões posteriores).
+git reset --hard hash # Deixa o arquivo commitado (unmodified) mas volta a versão para a da hash informada (ELIMINA VERSÕES POSTERIORES).
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Informações:
