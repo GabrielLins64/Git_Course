@@ -31,7 +31,8 @@ git shortlog # Mostra sumariamente informações básicas de logs
 git shortlog -sn # Mostra a qtd de commits de cada autor
 git log --graph # Mostra, em forma gráfica, os branches e versões.
 git show hash # Mostra os detalhes do commit com a hash (informada no log)
-
+git diff # Mostra as modificações feitas nos arquivos.
+git diff --name-online # Mostra apenas o nome dos arquivos modificados.
 
 
 
