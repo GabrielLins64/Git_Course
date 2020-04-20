@@ -53,5 +53,21 @@ git show hash # Mostra os detalhes do commit com a hash (informada no log)
 git diff # Mostra as modificações feitas nos arquivos.
 git diff --name-online # Mostra apenas o nome dos arquivos modificados.
 
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Repositórios remotos (GitHub):
+
+Gerando uma chave SSH:
+
+1. Acesse:
+	https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+2. Clique em "Generating a new SSH key"
+3. Siga as instruções e gere a chave SSH.
+4. Navege em: $cd ~/.ssh/
+5. Visualize sua chave pública com: $cat id_rsa.pub
+6. Copie a chave (com e-mail e tudo)
+7. Adicione ao GitHub em: 
+	Settings > SSH and GPG keys > New SSH key
+	*É uma boa prática colocar o nome da máquina no title
+8. Clique em adicionar SSH.
 
 
