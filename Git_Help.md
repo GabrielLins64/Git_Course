@@ -72,8 +72,19 @@ Repositórios remotos (GitHub):
 
 -> Ligando repositório local a um remoto:
 
-1. Crie um repositório no GitHub (ou abra um existente).
-2. 
+1. Crie uma pasta para o repositório e dê:
+	$git init
+2. Adicione os arquivos com:
+	$git add .
+3. Dê commit com:
+	$git commit -m "Algum comentário"
+4. Crie um repositório no GitHub (ou abra um existente) e copie a URL do repositório (com .git no final)
+5. Use:
+	$git remote add origin URL Do repositório
+6. Verifique a URL remota:
+	$git remote -v
+7. Para colocar, de fato, os arquivos da pasta no repositório use:
+	$git push -u origin master
 
 
 
