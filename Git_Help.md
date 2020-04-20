@@ -81,14 +81,10 @@ Repositórios remotos (GitHub):
 4. Crie um repositório no GitHub (ou abra um existente) e copie a URL do repositório (com .git no final)
 5. Use:
 	$git remote add origin URL Do repositório
+	*Para não ter que autenticar sempre que der push, use a URL como git@github.com:NomeDoPerfil/NomeDoRepositório.git
 6. Verifique a URL remota:
 	$git remote -v
 7. Para colocar, de fato, os arquivos da pasta no repositório use:
 	$git push -u origin master
-
-
-
-
-
 
 
