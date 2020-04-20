@@ -56,7 +56,7 @@ git diff --name-online # Mostra apenas o nome dos arquivos modificados.
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Repositórios remotos (GitHub):
 
-Gerando uma chave SSH:
+-> Gerando uma chave SSH:
 
 1. Acesse:
 	https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
@@ -69,5 +69,15 @@ Gerando uma chave SSH:
 	Settings > SSH and GPG keys > New SSH key
 	*É uma boa prática colocar o nome da máquina no title
 8. Clique em adicionar SSH.
+
+-> Ligando repositório local a um remoto:
+
+1. Crie um repositório no GitHub (ou abra um existente).
+2. 
+
+
+
+
+
 
 
