@@ -137,5 +137,6 @@ Para utilizar:
 	$git merge outrobranch # feito pelo master
 
 > Rebase:
+1.
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
