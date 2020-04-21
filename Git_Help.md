@@ -115,11 +115,10 @@ git branch -vv # Mostra o track dos branches existentes
 
 > Pull Request:
 
-$git checkout -b new_branch # Cria um novo branch e o -b alterna para ele
+$git checkout -b new_branch # Cria um novo branch
 $git add file # adiciona o arquivo
 $git commit -m "Comentário" # faz o commit
 $git push -u origin new_branch # -u é equivalente a --set-upstream
-$git 
 
 Após isto, uma solicitação de PULL REQUEST vai aparecer no GitHub. Após criar a solicitação de pull request, o master pode aprovar com:
 
