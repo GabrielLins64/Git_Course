@@ -113,6 +113,13 @@ git checkout Algum_branch # Começa a utilizar o "Algum_branch"
 git branch -d algum_branch # deleta algum_branch localmente
 git push origin --delete algum_branch # deleta algum_branch remotamente
 
+> Pull Request:
+
+$git checkout -b new_branch # Cria um novo branch
+$git add file # adiciona o arquivo
+$git commit -m "Comentário" # faz o commit
+$git push -u origin new_branch
+
 > Merge: 
 
 > Merge: Nós precisamos, de alguma maneira, misturar os commits do branch da nossa tarefa com os commits posteriores que foram feitos no branch master, quando este for “fundido” novamente. O merge basicamente cria um novo commit no branch onde o merge é realizado. Este commit puxa consigo a última referência do branch a partir do qual o merge é realizado. Este commit “especial” é chamado de merge commit. 
