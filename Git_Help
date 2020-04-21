@@ -146,4 +146,29 @@ Isso move toda o branch feature para começar na ponta do branch master, incorpo
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Extras:
 
->.gitignore: 
+> .gitignore: É um arquivo de texto que informa ao Git quais arquivos ou pastas devem ser ignorados, ao fazer pushs e commits, num projeto.
+
+1. Para ignorar, num projeto, todos os arquivos de extensão ".json", faça:
+	$vim .gitignore # Crie um arquivo gitignore
+2. Escreva no arquivo: *.json
+3. Salve o arquivo e pronto, agora o git irá ignorar o que foi especificado.
+
+*No perfil do GitHub, há um repositório com vários .gitignore de projetos comuns, como projetos com java, por exemplo, que ignoram arquivos .class (classes compiladas), arquivos .log e arquivos de pacote como .jar, .zip, .rar, etc.
+
+> Git Stash: Guarda modificações que ainda não tiveram commit num arquivo, para serem posteriormente recuperadas. Serve para trabalhar em outras partes do projeto, fazer pulls, etc. quando alguma modificação ainda não terminada está em progresso, esta modificação pode ser guardada para dar continuidade quando desejar. Comandos:
+
+$git stash # Guarda as modificações atuais em estado de WIP
+$git stash apply # Aplica as mudanças que foram armazenadas
+$git stash list # Mostra uma lista com os stashs existentes
+$git stash clear # Limpa os stashs armazenados
+
+> Alias: Atalhos de comandos
+
+$git config --global alias.s status # cria um alias para chamar o comando "status" com o alias "s".
+
+> Versionamento com tags: Cria versões do projeto no repositório remoto
+
+$git tag -a versão -m "Mensagem" # Adiciona uma versão do projeto. -a é para adicionar anotações, e -m define a mensagem. Exemplo:
+
+$git tag -a 1.0.0 -m "Adicionado README"
+$git push origin master --tags # Para adicionar ao repositório remoto (a versão pode ser encontrada em "releases").
