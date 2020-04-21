@@ -119,6 +119,7 @@ $git checkout -b new_branch # Cria um novo branch
 $git add file # adiciona o arquivo
 $git commit -m "Comentário" # faz o commit
 $git push -u origin new_branch
+Então, após criar um pull request no GitHub, o master pode dar merge, conforme o processo abaixo.
 
 > Merge: 
 
@@ -129,7 +130,6 @@ Para utilizar:
 2. use: $git merge master # para fundir com o branch master
 3. pode ser dado, também, pelo branch master:
 	$git merge outrobranch # feito pelo master
-4. A
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 
