@@ -1,8 +1,3 @@
-Curso Git e GitHub Udemy
-
-Comandos Git Básicos:
-
-~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Status de arquivos no GIT:
 
 O arquivo pode estar:
@@ -141,9 +136,5 @@ Para utilizar:
 2. use: $git merge master # para fundir com o branch master
 3. pode ser dado, também, pelo branch master:
 	$git merge outrobranch # feito pelo master
-4. A
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
-
-
-
