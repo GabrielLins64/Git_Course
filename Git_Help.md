@@ -110,7 +110,8 @@ Branches:
 git checkout -b Nome_do_branch # cria um branch no repositório atual
 git branch # mostra os branches do repositório e qual está sendo utilizado no momento
 git checkout Algum_branch # Começa a utilizar o "Algum_branch"
-git checkout -D algum_branch # deleta algum_branch
+git branch -d algum_branch # deleta algum_branch localmente
+git push origin --delete algum_branch # deleta algum_branch remotamente
 
 > Merge: 
 
@@ -119,7 +120,7 @@ git checkout -D algum_branch # deleta algum_branch
 Para utilizar:
 1. Realize os commits no branch que está sendo utilizado
 2. use: $git merge master # para fundir com o branch master
-
+3.  
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 
