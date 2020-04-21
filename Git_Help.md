@@ -136,4 +136,6 @@ Para utilizar:
 3. pode ser dado, também, pelo branch master:
 	$git merge outrobranch # feito pelo master
 
+> Rebase:
+
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
