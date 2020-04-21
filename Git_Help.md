@@ -31,6 +31,7 @@ git init # Inicia um respositório na pasta atual
 git status # informa o status do repositório atual
 	Untracked: O arquivo existe mas ainda não foi incluído no git
 git add file.etc # Adiciona ao repositório o arquivo "file.etc"
+git add -A # Adiciona todas as alterações feitas.
 git commit # Dá o commit nos arquivos já adicionados.
 git commit -m "Adicione um comentário aqui" # É uma boa prática informar o que foi feito em cada commit
 git commit -am "Comentário" # commita todos os arquivos modificados
@@ -86,6 +87,9 @@ Ligando repositório local a um remoto:
 7. Para colocar, de fato, os arquivos da pasta no repositório use:
 	$git push -u origin master
 
+*Para adicionar um repositório remoto de outro projeto:
+$git remote add algumnome URLDoRepo
+
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Clones e Forks:
 
@@ -112,13 +116,21 @@ git branch # mostra os branches do repositório e qual está sendo utilizado no 
 git checkout Algum_branch # Começa a utilizar o "Algum_branch"
 git branch -d algum_branch # deleta algum_branch localmente
 git push origin --delete algum_branch # deleta algum_branch remotamente
+git branch -vv # Mostra o track dos branches existentes
 
 > Pull Request:
 
-$git checkout -b new_branch # Cria um novo branch
+$git checkout -b new_branch # Cria um novo branch e o -b alterna para ele
 $git add file # adiciona o arquivo
 $git commit -m "Comentário" # faz o commit
-$git push -u origin new_branch
+$git push -u origin new_branch # -u é equivalente a --set-upstream
+$git 
+
+Após isto, uma solicitação de PULL REQUEST vai aparecer no GitHub. Após criar a solicitação de pull request, o master pode aprovar com:
+
+$git checkout master # Caso seja necessário mudar para o branch master
+$git merge new_branch # Faz merge com o projeto do new_branch
+$git push -u origin master
 
 > Merge: 
 
