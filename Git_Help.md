@@ -120,7 +120,9 @@ git push origin --delete algum_branch # deleta algum_branch remotamente
 Para utilizar:
 1. Realize os commits no branch que está sendo utilizado
 2. use: $git merge master # para fundir com o branch master
-3. 
+3. pode ser dado, também, pelo branch master:
+	$git merge outrobranch # feito pelo master
+4. 
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 
