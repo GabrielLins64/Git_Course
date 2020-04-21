@@ -172,3 +172,5 @@ $git tag -a versão -m "Mensagem" # Adiciona uma versão do projeto. -a é para 
 
 $git tag -a 1.0.0 -m "Adicionado README"
 $git push origin master --tags # Para adicionar ao repositório remoto (a versão pode ser encontrada em "releases").
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
