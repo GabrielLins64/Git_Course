@@ -105,10 +105,7 @@ Clones e Forks:
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Branches:
 
-> Branch: Ponteiro móvel que leva a um commit. Pelo GitHub: Use um branch para isolar o 
-trabalho de desenvolvimento sem afetar outros branches no repositório. Cada repositório 
-tem um branch padrão e pode ter vários outros branches. Você pode fazer merge de um 
-branch em outro branch usando uma pull request.
+> Branch: Ponteiro móvel que leva a um commit. Pelo GitHub: Use um branch para isolar o trabalho de desenvolvimento sem afetar outros branches no repositório. Cada repositório em um branch padrão pode ter vários outros branches. Você pode fazer merge de um branch em outro branch usando uma pull request.
 
 git checkout -b Nome_do_branch # cria um branch no repositório atual
 git branch # mostra os branches do repositório e qual está sendo utilizado no momento
@@ -116,6 +113,13 @@ git checkout Algum_branch # Começa a utilizar o "Algum_branch"
 git checkout -D algum_branch # deleta algum_branch
 
 > Merge: 
+
+> Merge: Nós precisamos, de alguma maneira, misturar os commits do branch da nossa tarefa com os commits posteriores que foram feitos no branch master, quando este for “fundido” novamente. O merge basicamente cria um novo commit no branch onde o merge é realizado. Este commit puxa consigo a última referência do branch a partir do qual o merge é realizado. Este commit “especial” é chamado de merge commit. 
+
+Para utilizar:
+1. Realize os commits no branch que está sendo utilizado
+2. use: $git merge master # para fundir com o branch master
+
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 
