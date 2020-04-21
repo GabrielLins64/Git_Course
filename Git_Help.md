@@ -54,9 +54,7 @@ git diff # Mostra as modificações feitas nos arquivos.
 git diff --name-online # Mostra apenas o nome dos arquivos modificados.
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
-Repositórios remotos (GitHub):
-
--> Gerando uma chave SSH:
+Gerando uma chave SSH:
 
 1. Acesse:
 	https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
@@ -70,7 +68,8 @@ Repositórios remotos (GitHub):
 	*É uma boa prática colocar o nome da máquina no title
 8. Clique em adicionar SSH.
 
--> Ligando repositório local a um remoto:
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Ligando repositório local a um remoto:
 
 1. Crie uma pasta para o repositório e dê:
 	$git init
@@ -86,5 +85,27 @@ Repositórios remotos (GitHub):
 	$git remote -v
 7. Para colocar, de fato, os arquivos da pasta no repositório use:
 	$git push -u origin master
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Clones e Forks:
+
+> Clone: Copia (baixa) um repositório, com todos seus arquivos, para o repositório git local (da máquina).
+
+1. Vá até o repositório no GitHub e clique no botão verde "Clone or Download"
+2. Copie o URL informado.
+3. Use o comando:
+	$git clone URL NomeDaPastaQueVaiConterOClone
+*Não é possível dar pushs em repositórios clonados que não são de sua autoria.
+
+> Fork: Faz uma cópia de um repositório remoto para os seus repositórios, de forma que você possa contribuir no projeto e enviar pull requests ao projeto original.
+
+1. No GitHub, navegue até o repositório que deseja fazer o fork.
+2. Clique na opção fork.
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Branches:
+
+
+
 
 
