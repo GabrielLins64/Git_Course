@@ -1,3 +1,8 @@
+Curso Git e GitHub Udemy
+
+Comandos Git Básicos:
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
 Status de arquivos no GIT:
 
 O arquivo pode estar:
@@ -102,7 +107,7 @@ Clones e Forks:
 2. Clique na opção fork.
 
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
-Projetos paralelos (Branches, Pull request, merge e rebase):
+Branches:
 
 > Branch: Ponteiro móvel que leva a um commit. Pelo GitHub: Use um branch para isolar o trabalho de desenvolvimento sem afetar outros branches no repositório. Cada repositório em um branch padrão pode ter vários outros branches. Você pode fazer merge de um branch em outro branch usando uma pull request.
 
@@ -115,18 +120,24 @@ git branch -vv # Mostra o track dos branches existentes
 
 > Pull Request:
 
-$git checkout -b new_branch # Cria um novo branch
-*Ou mude para um branch existente: $git checkout existing_branch
-$git add file # adiciona o arquivo modificado
-$git commit -m "Comentário" # faz o commit do arquivo
-*Antes de dar um push pode ser uma boa idéia dar um mage no master para garantir manter as alterações já feitas no projeto.
+$git checkout -b new_branch # Cria um novo branch e o -b alterna para ele
+$git add file # adiciona o arquivo
+$git commit -m "Comentário" # faz o commit
+<<<<<<< HEAD
 $git push -u origin new_branch # -u é equivalente a --set-upstream
+$git 
 
-*Após isto, uma solicitação de PULL REQUEST deve ser feita manualmente no repositório remoto do GitHub. Após criar a solicitação de pull request, o master pode aprovar com:
+Após isto, uma solicitação de PULL REQUEST vai aparecer no GitHub. Após criar a solicitação de pull request, o master pode aprovar com:
 
 $git checkout master # Caso seja necessário mudar para o branch master
 $git merge new_branch # Faz merge com o projeto do new_branch
 $git push -u origin master
+=======
+$git push -u origin new_branch
+Então, após criar um pull request no GitHub, o master pode dar merge, conforme o processo abaixo.
+>>>>>>> new_branch
+
+> Merge: 
 
 > Merge: Nós precisamos, de alguma maneira, misturar os commits do branch da nossa tarefa com os commits posteriores que foram feitos no branch master, quando este for “fundido” novamente. O merge basicamente cria um novo commit no branch onde o merge é realizado. Este commit puxa consigo a última referência do branch a partir do qual o merge é realizado. Este commit “especial” é chamado de merge commit. 
 
@@ -136,14 +147,7 @@ Para utilizar:
 3. pode ser dado, também, pelo branch master:
 	$git merge outrobranch # feito pelo master
 
-> Rebase: Como uma alternativa à mesclagem (merge), você pode fazer o rebase do branch feature no branch master usando os comandos a seguir:
-
-$git checkout feature
-$git rebase master
-
-Isso move toda o branch feature para começar na ponta do branch master, incorporando efetivamente todas as novas confirmações em master. Mas em vez de usar uma confirmação de merge, o rebase reescreve o histórico do projeto criando confirmações totalmente novas para cada confirmação no branch original.
-
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
-Extras:
 
->.gitignore: 
+
+
