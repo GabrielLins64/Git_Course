@@ -1,0 +1,38 @@
+Algumas dicas de comandos git com conceitos menos básicos:
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Comandos para controle de dano:
+
+git commit --amend # permite "re"commitar o último commit (útil para modificar mensagens de commit erradas)
+git reset --soft HEAD~2 # Remove os 2 últimos commits (a partir de HEAD), voltando os arquivos para o estado de staged, sem perdê-los. O 2 pode ser qualquer outro número.
+git reset --mixed HEAD~3 # Remove os 3 últimos commits, mantendo os arquivos, mas voltando-os para estágio de Untracked ou Modified.
+git reset --hard HEAD~1 # Remove o último commit, perdendo todas as mudanças "commitadas" (incluindo os arquivos adicionados ou modificados).
+git reset -- NOMEARQUIVO # Remove o NOMEARQUIVO do estado STAGED, útil quando se adiciona muitos arquivos com add, e precisa tirar alguns.
+git add -i # Abre um menu interativo para várias funcionalidades de add e remoção de stageds (pode fazer o comando acima com vários arquivos facilmente, utilizando a função "revert")
+git add -p # Dá opções de dividir as modificações em "hunks", permitindo commits separados para diferentes modificações num mesmo arquivo
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Dicas e boas práticas:
+
+*Evite utilizar add . para commitar vários arquivos ou mudanças de uma vez. Cada adição/modif. deve ter seu próprio commit, por questão de organização no log
+
+~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
+Como contribuir com um projeto:
+
+1. Vá até o repositório do GitHub no qual deseja contribuir e clique em "fork".
+2. $ git clone URL_do_seu_repo_forkado # Clona no diretório atual o repositório remoto como local.
+3. Navegue até a pasta do repositório clonado
+4. $ git remote add upstream URL_do_repositório_original # Agora, origin será o endereço para o seu repositório forkado, e upstream para o original do projeto.
+5. $ git pull upstream master # para baixar os arquivos do repositório original e sincronizar com as possíveis atualizações do projeto
+6. $ git checkout -b nome_do_branch # Cria um branch com as informações de sua modificação (ex: hotfix/readme-update)
+7. Coloque/faça suas modificações no repositório local
+8. $ git add . # Adicione suas modificações
+9. $ git commit -m "Mensagem explicativa sobre as modificações"
+10. $ git push origin nome_do_branch # sobe as atualizações para o seu repositório forkado.
+11. Volte ao GitHub siga as instruções que aparecerão e faça um pull request descrevendo suas modificações no repositório original.
+12. Após o pull request ser aprovado e ter sido feito merge com o master no repositório original delete seu branch no GitHub, e localmente: 
+13. $ git branch -D nome_do_branch # delete o seu branch criado para modificação
+14. $ git pull upstream master # Atualize seu repo local com as modificações do master.
+
+
+
