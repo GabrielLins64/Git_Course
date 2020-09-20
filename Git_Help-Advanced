@@ -16,4 +16,3 @@ Dicas e boas práticas:
 
 *Evite utilizar add . para commitar vários arquivos ou mudanças de uma vez. Cada adição/modif. deve ter seu próprio commit, por questão de organização no log
 
-
