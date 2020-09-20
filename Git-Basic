@@ -121,56 +121,8 @@ git branch -d algum_branch # deleta algum_branch localmente
 git push origin --delete algum_branch # deleta algum_branch remotamente
 git branch -vv # Mostra o track dos branches existentes
 
-<<<<<<< HEAD:Git_Help
-> Fazendo uma Pull Request:
-
-1. Vá no seu clone do repositório. Antes de dar um push é uma boa prática dar um fetch e merge no master, do upstream (repo original), para garantir manter as alterações já feitas no projeto.
-
-	$ git fetch upstream # Faz download dos ultimos commits do branch remoto, mas não os incorpora com a copia actual do repositorio. Estes commits so estarao disponiveis no branch upstream\master, e o branch master continua intacto.
-
-2. Caso haja mudanças no repositório original, salve suas mudanças locais em algum outro canto e busque o conteúdo novo do upstream com:
-
-	$ git pull upstream # Faz o fetch do upstream e dá um merge no master
-OU:
-	$ git checkout master # Volte para o branch master
-	$ git merge upstream/master # Dê um merge no que o fetch buscou
-
-3. Agora, para inserir suas modificações locais, utilize um novo branch (boa prática) com um nome informativo acerca de suas modificações.
-
-	$ git branch novo_branch # Cria um novo branch
-	$ git checkout novo_branch # Muda para o novo branch
-OU:
-	$ git checkout -b novo_branch # Já cria e modifica para o novo branch
-
-4. Adicione seus arquivos:
-
-	$ git add file # adiciona o arquivo modificado
-	$ git commit -m "Comentário" # faz o commit do arquivo
-
-5. Suba para seu repositório "forkado":
-
-	$ git push -u origin novo_branch # -u é equivalente a --set-upstream
-
-6. Vá até seu repositório "forkado" no GitHub e dê manualmente um pull request descrevendo as mudanças que foram feitas.
-
-7. Após ter sua Pull Request aceita é seguro deletar seu branch tanto do GitHub (no site) quanto do seu repositório local. No local pode ser feito com:
-
-	$ git branch -D novo_branch # Deleta o novo branch
-
-8. Por fim, atualize seu repositório local e origin com o repositório de upstream:
-
-	$ git pull upstream master # Puxa do upstream e branch master o repo original atualizado com todas as mudanças
-	$ git push origin master # Atualize, com o branch master, o seu repositório forkado.
-
-> Aceitando uma Pull Request:
-
-$git checkout master # Caso seja necessário mudar para o branch master
-$git merge new_branch # Faz merge com o projeto do new_branch
-$git push -u origin master
-=======
 ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ 
 Merge e Rebase:
->>>>>>> 27a86107a519414bf05deab0b20d2df013fafad5:Git-Basic
 
 > Merge: Nós precisamos, de alguma maneira, misturar os commits do branch da nossa tarefa com os commits posteriores que foram feitos no branch master, quando este for “fundido” novamente. O merge basicamente cria um novo commit no branch onde o merge é realizado. Este commit puxa consigo a última referência do branch a partir do qual o merge é realizado. Este commit “especial” é chamado de merge commit. 
 
@@ -261,23 +213,4 @@ $git revert hash # desfaz o commit com a hash especificada.
 $git tag -d 1.0.0 # deleta a tag 1.0.0
 $git push origin :1.0.0 # deleta a tag no repo remoto
 $git push origin :algum_branch # deleta o branch algum_branch.
-
-<<<<<<< HEAD:Git_Help
-~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
-Como contribuir com um projeto:
-
-1. Vá até o repositório do GitHub no qual deseja contribuir e clique em "fork".
-2. $ git clone URL_do_seu_repo_forkado # Clona no diretório atual o repositório remoto como local.
-3. Navegue até a pasta do repositório clonado
-4. $ git remote add upstream URL_do_repositório_original # Agora, origin será o endereço para o seu repositório forkado, e upstream para o original do projeto.
-5. $ git pull upstream master # para baixar os arquivos do repositório original e sincronizar com as possíveis atualizações do projeto
-6. $ git checkout -b nome_do_branch # Cria um branch com as informações de sua modificação (ex: hotfix/readme-update)
-7. $ git add . # Adicione suas modificações
-8. $ git commit -m "Mensagem explicativa sobre as modificações"
-9. $ git push origin nome_do_branch # sobe as atualizações para o seu repositório forkado.
-10. Volte ao GitHub e faça um pull request das suas alterações no seu repositório, siga as instruções que aparecerão e faça um pull request no repositório original.
-
-
-=======
->>>>>>> 27a86107a519414bf05deab0b20d2df013fafad5:Git-Basic
 
