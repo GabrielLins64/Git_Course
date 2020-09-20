@@ -1,8 +1,0 @@
-Algumas dicas de comandos git com conceitos menos básicos:
-
-~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X ~~~~~~~~~~~~~~~~~ X
-
-git commit --amend # permite "re"commitar o último commit (útil para modificar mensagens de commit erradas)
-git reset --soft HEAD~2 # Remove os 2 últimos commits (a partir de HEAD), voltando os arquivos para o estado de staged, sem perdê-los. O 2 pode ser qualquer outro número.
-git reset --mixed HEAD~3 # Remove os 3 últimos commits, mantendo os arquivos, mas voltando-os para estágio de Untracked ou Modified.
-git reset --hard HEAD~1 # Remove o último commit, perdendo todas as mudanças "commitadas" (incluindo os arquivos adicionados ou modificados).
