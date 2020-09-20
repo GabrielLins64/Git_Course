@@ -116,12 +116,30 @@ git branch -vv # Mostra o track dos branches existentes
 
 > Pull Request:
 
-$git checkout -b new_branch # Cria um novo branch
-*Ou mude para um branch existente: $git checkout existing_branch
-$git add file # adiciona o arquivo modificado
-$git commit -m "Comentário" # faz o commit do arquivo
-*Antes de dar um push pode ser uma boa idéia dar um mage no master para garantir manter as alterações já feitas no projeto.
-$git push -u origin new_branch # -u é equivalente a --set-upstream
+Vá no seu clone do repositório e utilize um branch com o nome adequado ao que você irá modificar/acrescentar:
+
+$ git branch novo_branch # Cria um novo branch
+$ git checkout novo_branch # Muda para o novo branch
+(Alternativamente, estes dois comandos podem ser substituídos por $ git checkout -b novo_branch)
+
+Faça as modificações no arquivo que deseja e os adicione
+
+$ git add file # adiciona o arquivo modificado
+$ git commit -m "Comentário" # faz o commit do arquivo
+
+Antes de dar um push é uma boa prática dar um fetch e merge no master, do upstream (repo original), para garantir manter as alterações já feitas no projeto.
+
+$ git fetch upstream # Faz download dos ultimos commits do branch remoto, mas não os incorpora com a copia actual do repositorio. Estes commits so estarao disponiveis no branch upstream\master, e o branch master continua intacto.
+
+Caso haja mudanças no repositório original, salve suas mudanças em algum outro canto e busque o conteúdo novo do upstream com:
+
+$ git pull upstream # Faz o fetch do upstream e dá um merge no master
+OU:
+$ git checkout master # Volte para o branch master
+$ git merge upstream/master # Dê um merge no que o fetch buscou
+
+
+$ git push -u origin new_branch # -u é equivalente a --set-upstream
 
 *Após isto, uma solicitação de PULL REQUEST deve ser feita manualmente no repositório remoto do GitHub. Após criar a solicitação de pull request, o master pode aprovar com:
 
@@ -188,18 +206,15 @@ $git push origin :algum_branch # deleta o branch algum_branch.
 Como contribuir com um projeto:
 
 1. Vá até o repositório do GitHub no qual deseja contribuir e clique em "fork".
-2. $git clone URL_do_seu_repo_forkado # Clona no diretório atual o repositório remoto como local.
+2. $ git clone URL_do_seu_repo_forkado # Clona no diretório atual o repositório remoto como local.
 3. Navegue até a pasta do repositório clonado
-4. $git remote add upstream URL_do_repositório_original # Agora, origin será o endereço para o seu repositório forkado, e upstream para o original do projeto.
-5. Faça as alterações e adições que deseja e salve em algum canto diferente.
-6. $git checkout master # para ficar de branch master
-7. $git pull upstream master # para baixar os arquivos do repositório original e sincronizar com as possíveis atualizações do projeto
-8. $git push origin master # sobe as atualizações para o seu repositório forkado.
-9. git checkout -b nome_do_branch # Cria um branch com as informações de sua modificação (ex: hotfix/readme-update)
-10. Coloque suas alterações ou adições no diretório do repositório.
-11. $git commit -am "Mensagem com as alterações feitas".
-12. $git push -u origin nome_do_branch # sobe para seu repositório forkado suas alterações.
-13. Volte ao GitHub e faça um pull request das suas alterações no seu repositório, siga as instruções que aparecerão e faça um pull request no repositório original.
+4. $ git remote add upstream URL_do_repositório_original # Agora, origin será o endereço para o seu repositório forkado, e upstream para o original do projeto.
+5. $ git pull upstream master # para baixar os arquivos do repositório original e sincronizar com as possíveis atualizações do projeto
+6. $ git checkout -b nome_do_branch # Cria um branch com as informações de sua modificação (ex: hotfix/readme-update)
+7. $ git add . # Adicione suas modificações
+8. $ git commit -m "Mensagem explicativa sobre as modificações"
+9. $ git push origin nome_do_branch # sobe as atualizações para o seu repositório forkado.
+10. Volte ao GitHub e faça um pull request das suas alterações no seu repositório, siga as instruções que aparecerão e faça um pull request no repositório original.
 
 
 
